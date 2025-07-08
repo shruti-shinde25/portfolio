@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shruti Shinde - Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('tc.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    /* Fixed position top-left name */
+    .top-left-name {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-weight: 900;
+      font-size: 28px;
+      color: #ff4c60;
+      z-index: 1000;
+      letter-spacing: 2px;
+      text-shadow:
+        2px 2px 4px rgba(0, 0, 0, 0.8),
+        0 0 10px rgba(255, 76, 96, 0.6);
+      font-family: 'Segoe UI Black', Tahoma, Geneva, Verdana, sans-serif;
+      user-select: none;
+    }
+
+    /* About Me block */
+    .intro-block {
+      max-width: 440px;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      text-align: left;
+      margin-bottom: 60px;
+    }
+
+    .hi-text {
+      font-size: 22px;
+      color: #ffc1cc;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .name-large {
+      font-size: 44px;
+      font-weight: 900;
+      margin-bottom: 16px;
+      color: #fff;
+    }
+
+    .name-large span {
+      font-weight: 400;
+      margin-right: 10px;
+      font-size: 28px;
+      color: #ff4c60;
+    }
+
+    .summary {
+      font-size: 18px;
+      color: #f9f9f9;
+      margin-bottom: 25px;
+      line-height: 1.7;
+    }
+
+    .hire-btn {
+      display: inline-block;
+      background-color: #e63946;
+      color: #fff;
+      padding: 12px 32px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(230, 57, 70, 0.4);
+    }
+
+    .hire-btn:hover {
+      background-color: #c62839;
+      transform: translateY(-2px);
+    }
+
+    /* Projects Section */
+    section#projects {
+      max-width: 440px;
+      width: 100%;
+      margin-bottom: 80px;
+    }
+
+    section#projects h2 {
+      font-size: 38px;
+      margin-bottom: 40px;
+      color: #ffc1cc;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .project-container {
+      display: flex;
+      flex-direction: column; /* vertical stack */
+      gap: 30px;
+    }
+
+    .project-card {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      background-color: #222;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: #fff;
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    .project-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    }
+
+   
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 16px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  background-color: #222; /* Matching project card color */
+}
+
+
+    .project-card:hover img {
+      filter: brightness(0.6);
+      transform: scale(1.07);
+    }
+
+    /* Overlay with project info - hidden by default */
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(230, 57, 70, 0.85);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      border-radius: 16px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .project-card:hover .overlay {
+      opacity: 1;
+    }
+
+    /* Footer with simple horizontal links */
+    footer {
+      width: 100%;
+      max-width: 440px;
+      text-align: center;
+      padding: 20px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      font-size: 18px;
+      color: #e63946; /* red color */
+      font-weight: 600;
+      user-select: none;
+    }
+
+    footer a {
+      color: #e63946; /* red color */
+      text-decoration: none;
+      margin: 0 15px;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #ff4c60;
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="top-left-name">Shruti Shinde</div>
+
+  <div class="intro-block">
+    <div class="hi-text">Hi!</div>
+    <h1 class="name-large">
+      <span>I am</span> Shruti Shinde
+    </h1>
+    <p class="summary">
+      Driven and enthusiastic professional committed to continuous learning and delivering quality work. I’m passionate about growth, creativity, and making a positive impact.
+    </p>
+    <a href="mailto:shruti@example.com" class="hire-btn">Hire Me</a>
+  </div>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="project-container">
+      <div class="project-card">
+        <img src="img3.PNG" alt="Weather Forecasting" />
+        <div class="overlay">
+          Weather Forecasting app using real-time data APIs to provide accurate weather updates.
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="img2.PNG" alt="Age Calculator" />
+        <div class="overlay">
+          Interactive Age Calculator to quickly determine age based on birthdate input.
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="img1.PNG" alt="Password Generator" />
+        <div class="overlay">
+          Secure Password Generator with customizable options for strength and length.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <a href="#skills">Skills</a> | 
+    <a href="#contact">Contact Me</a> | 
+    <a href="#projects">Project</a>
+  </footer>
+
+</body>
+</html>
