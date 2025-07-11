@@ -14,7 +14,7 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('tc.jpg') no-repeat center center fixed;
+      background: url('bc.JPG') no-repeat center center fixed;
       background-size: cover;
       color: #fff;
       min-height: 100vh;
@@ -23,10 +23,8 @@
       align-items: center;
       padding: 20px;
       position: relative;
-      min-height: 100vh;
     }
 
-    /* Fixed position top-left name */
     .top-left-name {
       position: fixed;
       top: 20px;
@@ -43,7 +41,6 @@
       user-select: none;
     }
 
-    /* About Me block */
     .intro-block {
       max-width: 440px;
       background: rgba(0, 0, 0, 0.6);
@@ -100,7 +97,6 @@
       transform: translateY(-2px);
     }
 
-    /* Projects Section */
     section#projects {
       max-width: 440px;
       width: 100%;
@@ -117,7 +113,7 @@
 
     .project-container {
       display: flex;
-      flex-direction: column; /* vertical stack */
+      flex-direction: column;
       gap: 30px;
     }
 
@@ -141,24 +137,21 @@
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
     }
 
-   
-.project-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-  border-radius: 16px;
-  transition: transform 0.4s ease, filter 0.4s ease;
-  background-color: #222; /* Matching project card color */
-}
-
+    .project-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      border-radius: 16px;
+      transition: transform 0.4s ease, filter 0.4s ease;
+      background-color: #222;
+    }
 
     .project-card:hover img {
       filter: brightness(0.6);
       transform: scale(1.07);
     }
 
-    /* Overlay with project info - hidden by default */
     .overlay {
       position: absolute;
       bottom: 0;
@@ -182,7 +175,6 @@
       opacity: 1;
     }
 
-    /* Footer with simple horizontal links */
     footer {
       width: 100%;
       max-width: 440px;
@@ -190,13 +182,13 @@
       padding: 20px 0;
       border-top: 1px solid rgba(255, 255, 255, 0.3);
       font-size: 18px;
-      color: #e63946; /* red color */
+      color: #e63946;
       font-weight: 600;
       user-select: none;
     }
 
     footer a {
-      color: #e63946; /* red color */
+      color: #e63946;
       text-decoration: none;
       margin: 0 15px;
       cursor: pointer;
@@ -257,3 +249,5 @@
 
 </body>
 </html>
+
+     
